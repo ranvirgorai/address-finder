@@ -5,9 +5,7 @@ app.controller('deleveryCtrl', [
   '$http',
   '$localStorage',
   'API_CONSTANTS',
-  'SEARCH_CONSUMER',
-  'GENERATE_INVOICE',
-  function($scope, $http, $localStorage, API_CONSTANTS, SEARCH_CONSUMER, GENERATE_INVOICE) {
+  function($scope, $http, $localStorage, API_CONSTANTS) {
     var url = API_CONSTANTS.API;
 
     $scope.loadCountries = function() {
