@@ -1,0 +1,355 @@
+<div class="container-fluid">
+    <div class="row" style="padding-top:15px ">
+        <div class="hidden-xs hidden-sm col-md-2 pull-md-6 ">
+            <button class="btn btn-block btn-primary">update</button>
+            <br>
+            <button class="btn btn-block btn-primary">Search</button>
+            <br>
+            <button class="btn btn-block btn-primary">delevery</button>
+            <br>
+            <div class="form-group">
+                <label for="Console">Console</label>
+                <textarea placeholder="Console" text="ranvir" class="form-control" rows="12" id="Console" ng-model="consoleText"></textarea>
+            </div>
+        </div>
+        <div class="col-md-6 push-md-6 no-print" id="mainView">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"> Enter User Info</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">I</span>
+                                    <input type="text" ng-model="num_invoice" class="form-control" placeholder="Invoice No." aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">{{num_date | date:'medium'}}</span>
+                                    <input type="text"  class="form-control" placeholder="Date" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">N</span>
+                            <input type="text" ng-model="txt_name" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+                        </div>
+                        </span>
+                        <br>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">A</span>
+                            <input type="text" ng-model="txt_address" class="form-control" placeholder="Address" aria-describedby="basic-addon1">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">M</span>
+                                    <input type="number" ng-model="num_mobile" class="form-control" placeholder="Mobile No." aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">P</span>
+                                    <input type="number" ng-model="num_midPiece" class="form-control" placeholder="Piece" aria-describedby="basic-addon1">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="...">
+      </span>
+                                    <input type="number" ng-model="num_color" class="form-control" placeholder="Color" aria-label="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <input type="number" ng-model="num_spiece" class="form-control" placeholder="Grounded Spiece" aria-label="...">
+                                    <span class="input-group-addon">
+        <input type="checkbox" aria-label="...">
+      </span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+        <input type="checkbox" ng-model='smallPiece' ng-init='smallPiece=false'  aria-label="...">
+      </span>
+                                    <input type="number" ng-model="num_smallPiece" ng-disabled="!smallPiece" n class="form-control" placeholder="Small Piece" aria-label="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <input type="number" ng-model="num_largePiece" ng-disabled="!largePiece" class="form-control" placeholder="Large Piece" aria-label="...">
+                                    <span class="input-group-addon">
+        <input type="checkbox" ng-model='largePiece' ng-init='largePiece=false' aria-label="...">
+      </span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+        <input type="checkbox" ng-model='material'  ng-init='material=false' aria-label="...">
+      </span>
+                                    <input type="text" ng-model="txt_material" ng-disabled="!material" class="form-control" placeholder="Metrial Name" aria-label="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <input type="number" ng-model="num_material" ng-disabled="!material" class="form-control" placeholder="Material Cost" aria-label="...">
+                                    <span class="input-group-addon">
+        <input type="checkbox" ng-model='material' ng-init='material=false' aria-label="...">
+      </span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+        <input type="checkbox" ng-model='advance' ng-init='advance=true'  aria-label="...">
+      </span>
+                                    <input type="number" ng-model="num_advance" ng-disabled="!advance" class="form-control" placeholder="Advance" aria-label="...">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <input type="number" ng-model="num_pay" ng-disabled="!pay" class="form-control" placeholder="Pay" aria-label="...">
+                                    <span class="input-group-addon">
+        <input type="checkbox" ng-model='pay' ng-init='pay=false'  aria-label="...">
+      </span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <toggle ng-model="ready" ng-change="changed()" on="Ready " off="Not Ready" onstyle="btn-warning" offstyle="btn-default">
+                                </toggle>
+                            </div>
+                            <div class="col-lg-3">
+                                <toggle ng-model="deepSearch" ng-change="changed()" on="Deep " off="Normal" onstyle="btn-danger" offstyle="btn-default">
+                                </toggle>
+                            </div>
+                            <div class="col-lg-3">
+                                <toggle ng-model="searchByName" ng-change="changed()" on="By Name " off="By Id" onstyle="btn-primary" offstyle="btn-default">
+                                </toggle>
+                            </div>
+                            <div class="col-lg-3">
+                                <toggle ng-model="mixed" ng-change="changed()" on="Mixed " off="Not Mixed" onstyle="btn-danger" offstyle="btn-default">
+                                </toggle>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <button class="btn btn-block btn-success" ng-click="clearform()">Clear</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <button ng-click="updateMe()" class="btn btn-block btn-success">Update</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <button ng-click="submitForm()" class="btn btn-block btn-success">Submit</button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <button class="btn btn-block btn-warning" ng-click="printInvoice('printableInvoice')">Print</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <button ng-click="search()" class="btn btn-block btn-warning">Search</button>
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <button ng-click="previousRecord()" class="btn btn-block btn-default">
+                                << </button>
+                        </div>
+                        <div class="col-lg-4">
+                            <toggle ng-model="delivered" ng-change="changed()" on="Delivered " off="Not delivered" onstyle="btn-success" offstyle="btn-default">
+                            </toggle>
+                        </div>
+                        <div class="col-lg-4">
+                            <button ng-click="nextRecord()" class="btn btn-block btn-default">>></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden-xs hidden-sm col-md-4 pull-md-6 ">
+            <div id="printableInvoice">
+                <!-- <table border="1" bordercolor="#000000" class="invoice">
+                    >
+                </table> -->
+                <table class="invoice tg" style="table-layout: fixed;">
+                    <colgroup>
+                        <col style="width: 198px">
+                        <col style="width: 86px">
+                        <col style="width: 77px">
+                    </colgroup>
+                    <tr>
+                        <th class="tg-yw4l" colspan="3" style="text-align: center;color:#8e44ad;font-size: 20px; border-bottom:none;border-color: #000000"><u><b>RADHA BAKERY</b></u></th>
+                    </tr>
+                    <tr style="height:20px">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-right: none; ">Zone No:3,Block-B</td>
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-left: none; " colspan="2"><b>Ph: 9031392958</b></td>
+                    </tr>
+                    <tr style="height:20px">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-right: none; ">Birsanagar, JSR</td>
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-left: none; " colspan="2">Time : {{clock | date:'mediumTime'}}</td>
+                    </tr>
+                    <tr style="height:20px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-right: none; ">Jharkhand</td>
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-left: none; " colspan="2">Date : {{clock | date:'mediumDate'}} </td>
+                    </tr>
+                    <tr style="height:5px;padding-top:5px">
+                        <td class="tg-yw4l" style="border-bottom-style: dashed;border-top: none; " colspan="3"></td>
+                    </tr>
+                    <tr style="height:20px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-right: none">Bill to :</td>
+                        <td class="tg-yw4l" style="border: none;">Invoice No.</td>
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-left: none"> <span ng-bind="num_invoice"> </td>
+                    </tr>
+                    <tr style="height:20px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-right: none"><b><span ng-bind="txt_name"></b></span></td>
+                        <td class="tg-yw4l" style=" border:none;"></td>
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-left: none"><span ng-bind=""></td>
+                    </tr>
+                    <tr style="height:20px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-right: none"><span ng-bind="txt_address"></td>
+                        <td class="tg-yw4l" colspan="2" style=" border-top: none;border-bottom: none;border-left: none;text-align: center;"> <span>{{delivered ? 'Delivered' : ''}}</span></td>
+                    </tr>
+                    <tr style="height:20px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-right: none"><span ng-bind="num_mobile"></td>
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;border-left: none;text-align: center;" colspan="2"><span>{{mixed ? 'Mixed' : ''}}</span></td>
+                    </tr>
+                    <tr style="height:5px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none" colspan="3"></td>
+                    </tr>
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l"><b>MATERIAL</b></td>
+                        <td class="tg-yw4l" style="text-align: center;padding:0 ;"><b>QUANTITY</b></td>
+                        <td class="tg-yw4l" style="text-align: center;padding:0 ;"><b>PRICE</b></td>
+                    </tr>
+
+
+
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;"><span>{{num_largePiece ? 'Large Piece' : ''}}</span></td>
+
+
+                        <td class="tg-yw4l" style=" border:none; padding:0;text-align: center;"><span>{{num_largePiece ? num_largePiece : ''}}</span></td>
+
+
+                        <td class="tg-yw4l" style=" border-top:none;border-bottom:none; padding:0; text-align: center;"><span ng-model="large_piece_prc">{{num_largePiece ? mixed ? ((num_largePiece*M_L_Piece_Price)| currency:'&#8377; '):((num_largePiece*L_Piece_Price)| currency:'&#8377; ') : ''}}</span></td>
+                    </tr>
+
+
+
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;"><span>{{num_midPiece ? 'Piece' : ''}}</span></td>
+
+
+                        <td class="tg-yw4l" style=" border:none; padding:0; text-align: center;"><span>{{num_midPiece ? num_midPiece : ''}}</span></td>
+
+
+                        <td class="tg-yw4l" style=" border-top:none;border-bottom:none;padding:0;  text-align: center;"><span ng-model="mid_piece_prc">{{num_midPiece ? mixed ? ((num_midPiece*M_M_Piece_Price)| currency:'&#8377; '):((num_midPiece*M_Piece_Price )| currency:'&#8377; '): ''}}</span></td>
+
+
+                    </tr>
+
+
+
+
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;"><span>{{num_smallPiece ? 'Small Piece' : ''}}</span></td>
+                        <td class="tg-yw4l" style=" border:none; padding:0; text-align: center;"><span>{{num_smallPiece ? num_smallPiece : ''}}</span></td>
+                        <td class="tg-yw4l" style=" border-top:none;border-bottom:none; padding:0; text-align: center;"><span ng-model="small_piece_prc">{{num_smallPiece ? mixed ? ((num_smallPiece*M_S_Piece_Price)| currency:'&#8377; '):((num_smallPiece*S_Piece_Price)| currency:'&#8377; ' ): ''}}</span></td>
+                    </tr>
+
+
+
+
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;"><span>{{num_color ? 'Color' : ''}}</span></td>
+                        <td class="tg-yw4l" style=" border:none; padding:0;  text-align: center;"><span>{{num_color ?( num_color | currency:'&#8377; ')  : ''}}</span></td>
+                        <td class="tg-yw4l" style=" padding:0; border-top:none;border-bottom:none;padding:0;  text-align: center;"><span>{{num_color ? ( num_color | currency:'&#8377; ') : ''}}</span></td>
+                    </tr> 
+
+
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;"><span>{{num_spiece ? 'Gr. Spiece' : ''}}</span></td>
+                        <td class="tg-yw4l" style=" border:none; padding:0;  text-align: center;"><span>{{num_spiece ? ( num_spiece | currency:'&#8377; ') : ''}}</span></td>
+                        <td class="tg-yw4l" style=" padding:0; border-top:none;border-bottom:none;padding:0;  text-align: center;"><span>{{num_spiece ? ( num_spiece | currency:'&#8377; ') : ''}}</span></td>
+                    </tr>
+
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;"><span>{{txt_material ? txt_material : ''}}</span></td>
+                        <td class="tg-yw4l" style=" border:none; padding:0;  text-align: center;"><span>{{num_material ? num_material : ''}}</span></td>
+                        <td class="tg-yw4l" style=" padding:0; border-top:none;border-bottom:none;padding:0;  text-align: center;"><span>{{num_material ? (num_material| currency:'&#8377; ') : ''}}</span></td>
+                    </tr>
+
+
+
+                   
+
+
+                  
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style=" border-top: none;border-bottom: none;"></td>
+                        <td class="tg-yw4l" style="padding:0;  border:none; text-align: center;"></td>
+                        <td class="tg-yw4l" style="padding:0;  border-top:none;border-bottom:none; text-align: center;"></td>
+                    </tr>
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style="border-bottom: none; "></td>
+                        <td class="tg-yw4l" style="padding:0; text-align: center;">Total</td>
+                        <td class="tg-yw4l" style="padding:0; text-align: center;"> {{((num_midPiece ? mixed ? num_midPiece*M_M_Piece_Price:num_midPiece*M_Piece_Price : '')--(num_largePiece ? mixed ? num_largePiece*M_L_Piece_Price:num_largePiece*L_Piece_Price : '')--(num_smallPiece ? mixed ? num_smallPiece*M_S_Piece_Price:num_smallPiece*S_Piece_Price : '')--(num_color)--(num_spiece)--(num_material))| currency:'&#8377; '}}</td>
+                    </tr>
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style="border-bottom: none;border-top: none; text-align: center; "></td>
+                        <td class="tg-yw4l" style="border-bottom: none;border-top: none; text-align: center; ">Paid</td>
+                        <td class="tg-yw4l" style="border-bottom: none;padding:0;border-top: none; text-align: center; " ng-model="num_paid">{{(num_advance--num_pay)| currency:'&#8377; '}}</td>
+                    </tr>
+                    <tr style="height:25px ">
+                        <td class="tg-yw4l" style="border-bottom: none; border-top: none;text-align: center;"></td>
+                        <td class="tg-yw4l" style=" text-align: center;">Balance</td>
+                        <td class="tg-yw4l" style=" text-align: center; padding: 0;">{{(((num_midPiece ? mixed ? num_midPiece*M_M_Piece_Price:num_midPiece*M_Piece_Price : '')--(num_largePiece ? mixed ? num_largePiece*M_L_Piece_Price:num_largePiece*L_Piece_Price : '')--(num_smallPiece ? mixed ? num_smallPiece*M_S_Piece_Price:num_smallPiece*S_Piece_Price : '')--num_color--num_spiece--num_material)-num_advance-num_pay)| currency:'&#8377; '}}</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-yw4l" colspan="3" style="border-bottom: none; border-top: none;text-align: center;">Note: Delevery Time 9:00 AM to 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-yw4l" colspan="3" style="border-bottom: none; border-top: none;text-align: center;">Please Keep Change !</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-yw4l" colspan="3" style=" border-top: none;text-align: center;">Thank You !</td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <br>
+                <button class="btn btn-block btn-warning printButton" ng-click="printInvoice('printableInvoice')">Print Invoice</button>
+            </div>
+        </div>
+    </div>
+</div>

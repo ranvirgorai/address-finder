@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+  </head>
+  <body>
+    <h3 style="text-align: center;">Find Zip Code</h3>
+<div class="container" style="text-align: center;">
+<form name="findZipForm">
+    <select class="formshow" ng-required="true" ng-change="loadStates(form.countrySelected)" ng-options="country for country in countries" ng-model="form.countrySelected">
+        <option value="">--Select Country--</option>
+    </select>
+
+    <select class="formshow" ng-required="true" ng-change="loadCities(form.stateSelected)" ng-options="state for state in states" ng-model="form.stateSelected">
+        <option value="">--Select State--</option>
+    </select>
+
+    <select class="formshow" ng-required="true" ng-options="city for city in cities" ng-model="form.citySelected">
+        <option value="">--Select City--</option>
+    </select>
+    <button ng-disabled="findZipForm.$invalid" class="btn btn-success" ng-click="getZipCode(form)">Go</button>
+</br></br>
+    <div>
+        <span>
+          <h4>  <strong>Zip Code: </strong>{{zip}}</h4></span></div>
+</form></div>
+  </body>
+</html>
