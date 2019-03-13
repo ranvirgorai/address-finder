@@ -10,7 +10,7 @@
         <span
           >Enter Zip Code :
           <input type="text" pattern="^[0-9]{5,6}$" valid-numberonly ng-required="true" class="form-control" ng-model="address.zipcode" style="width: 20%; margin-left: 40%; margin-bottom: 1%" />
-          <button ng-disabled="findAddressForm.$invalid" class="btn btn-success" ng-click="getAddress(address)">GO</button></span
+          <button ng-disabled="findAddressForm.$invalid" class="btn btn-info" ng-click="getAddress(address)">GO</button></span
         >
         <br /><br />
         <div style="text-align: left;" ng-if="dispAddress.city && dispAddress.state && dispAddress.country">
