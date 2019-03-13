@@ -10,10 +10,10 @@ angular
         controller: 'indexCtrl'
       })
 
-      .state('app.delevery', {
-        url: 'delevery',
-        templateUrl: 'templates/delevery.html',
-        controller: 'deleveryCtrl'
+      .state('app.addToZip', {
+        url: 'add-zip',
+        templateUrl: 'templates/addToZip.html',
+        controller: 'addToZipCtrl'
       })
       .state('app.home', {
         url: 'home',

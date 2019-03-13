@@ -19,14 +19,9 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav">
-                <!-- <li><a ui-sref="app.tool" ui-sref-active="activeState"> Tools</a></li> -->
                 <li><a ui-sref="app.home" ui-sref-active="activeState">Find Address</a></li>
-                <li><a ui-sref="app.delevery" ui-sref-active="activeState">Find Zip</a></li>
-                <!-- <li><a ui-sref="app.entry" ui-sref-active="activeState"> Entry</a></li>
-                <li><a ui-sref="app.print" ui-sref-active="activeState"> Print</a></li>
-                <li><a ui-sref="app.queentry" ui-sref-active="activeState"> Que Entry</a></li>
-                <li><a ui-sref="app.admin" ui-sref-active="activeState"> Admin</a></li> -->
-              </ul>
+                <li><a ui-sref="app.addToZip" ui-sref-active="activeState">Find Zip</a></li>
+           </ul>
               <ul class="nav navbar-nav navbar-right datetime">
                 <li>{{ clock | date: 'mediumDate' }}</li>
                 <li>{{ clock | date: 'mediumTime' }}</li>
@@ -34,31 +29,7 @@
             </div>
           </div>
         </nav>
-        <!-- <div class="row">
-          <div class="hidden-xs hidden-sm col-md-1 pull-md-11 sidemenu">
-            <ul>
-              <li>
-                <a ui-sref="app.tool" ui-sref-active="activeState"><span class="glyphicon glyphicon-th-large"></span></a>
-              </li>
-              <li>
-                <a ui-sref="app.home" ui-sref-active="activeState"><span class="glyphicon glyphicon-home"></span></a>
-              </li>
-              <li>
-                <a ui-sref="app.entry" ui-sref-active="activeState"><span class="glyphicon glyphicon-user"></span></a>
-              </li>
-              <li>
-                <a ui-sref="app.delevery" ui-sref-active="activeState"><span class="glyphicon glyphicon-send"></span></a>
-              </li>
-              <li>
-                <a ui-sref="app.print" ui-sref-active="activeState"><span class="glyphicon glyphicon-print"></span></a>
-              </li>
-              <li>
-                <a ui-sref="app.queentry" ui-sref-active="activeState"><span class="glyphicon glyphicon-tint"></span></a>
-              </li>
-              <li>
-                <a ui-sref="app.admin" ui-sref-active="activeState"><span class="glyphicon glyphicon-tower"></span></a>
-              </li>
-            </ul> -->
+        
           </div>
           <div class="col-md-11 push-md-11">
             <ui-view> </ui-view>
@@ -68,13 +39,3 @@
     </div>
   </body>
 </html>
-<!--    <ul class="nav navbar-nav">
-      <li><a ui-sref="app.home" ui-sref-active="activeState" > Home<span class="sr-only">(current)</span></a></li>
-      <li><a ui-sref="app.cources" ui-sref-active="activeState" > Cources</a><br></li>
-      <li><a ui-sref="app.students"  ui-sref-active="activeState" > Students</a></li>
-      <li><a ui-sref="app.login"  ui-sref-active="activeState" > Login</a></li>
-      <li><a ui-sref="app.httptest"  ui-sref-active="activeState" > Http</a></li>
-      <li><a ui-sref="app.todo"  ui-sref-active="activeState" > Todo</a></li>
-      <li><a ui-sref="app.filter"  ui-sref-active="activeState" > My Filters</a></li>
-      <li><a ui-sref="app.directive"  ui-sref-active="activeState" >Custom Directive</a></li>
-    </ul> -->

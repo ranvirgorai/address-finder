@@ -1,6 +1,6 @@
 var app = angular.module('rbMgmSys');
 
-app.controller('deleveryCtrl', [
+app.controller('addToZipCtrl', [
   '$scope',
   '$http',
   '$localStorage',
