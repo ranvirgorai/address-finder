@@ -1,16 +1,23 @@
-# addressFinder
+# addressFinderApp
+
 install node.js
 
-run the following commands
-npm install
+## environment setup
 
-add the default values of country,state and city in the database
+- start mongodb using "mongod" command
+- npm install -g bower
 
-start mongodb using "mongod" command
-start the server using "nodemon server.js"
+## Project Setup
 
-open http://localhost:3000 on browser
+- Unzip folder
+- cd addressFinderApp
+- npm install
+- bower install
+- npm run setup //seeding database
+- npm start
 
+## Usages
 
-
-
+- open http://localhost:3001 on browser
+- home route for find zip to address
+- add-zip route for address to zip
